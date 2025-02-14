@@ -1,0 +1,17 @@
+{
+    "name": "Minecraft Modding",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+      "redhat.java",
+      "vscjava.vscode-java-pack",
+      "vscjava.vscode-maven"
+    ],
+    "forwardPorts": [25565],
+    "postCreateCommand": "mvn clean install"
+  }
+  
