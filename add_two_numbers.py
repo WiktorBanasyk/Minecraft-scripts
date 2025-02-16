@@ -46,9 +46,12 @@ def addTwoNumbers():
     l1 = [2,4,3] #list
     l2 = [5,6,4] #list
     
-    list1 = list(map(str,l1))
-    print(list1)
-    
+    list1 = int("".join(map(str,reversed(l1))))
+    list2 = int("".join(map(str,reversed(l2))))
+
+    total = list1 + list2
+
+    print(total)
 
 addTwoNumbers()
 
