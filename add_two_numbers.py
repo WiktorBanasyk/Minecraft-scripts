@@ -43,9 +43,12 @@ class Solution(object):
 """
 def addTwoNumbers():
     #for example 1
-    l1 = [2,4,3]
-    l2 = [5,6,4]
-    print(type(l1))
+    l1 = [2,4,3] #list
+    l2 = [5,6,4] #list
+    
+    list1 = list(map(str,l1))
+    print(list1)
+    
 
 addTwoNumbers()
 
