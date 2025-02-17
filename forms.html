@@ -6,7 +6,7 @@
     <title>Forms</title>
     <script>
         function sprawdz(form) {
-            alert('Pole Nazwisko musi być wypełnione');
+            alert('Pole Nazwisko musi być wypełnione'); {
             form.nazw.focus();
             return false;
         }
@@ -15,10 +15,49 @@
             form.imie.focus();
             return false;
         }
+        if (form.zawod.value == '') {
+            alert('Pole Zawód musi byc wypełnione');
+            form.zawod.focus();
+            return false;
+        }
+        return true;
+    }
+    
     </script>
+    <style type="text/css">
+        div {
+            width: 400px;
+            background-color: #dfdfdf;
+            padding: 10px;
+        }
+
+        .pole {
+            position: absolute;
+            left: 90px;
+
+        }
+        #ak1 {
+            font-size: 14pt;
+        }
+    </style>
 
 
 </head>
 <body>
+    <div>
+        <form enctype="text/plain" action=" " method="post"
+        onsubmit="return sprawdz(this);">
+        <p id="ak1">Dane osobowe:</p>
+        </form>
+        <b>Nazwisko:</b>
+        <input class="pole" name="nazw" value="" size="40"><br>
+        <b>Imię:</b>
+        <input class="pole" name="imie" value="" size="40"><br>
+        <b>Zawód:</b>
+        <input class="pole" name="zawod" value="" size="40"><br><br>
+        <label> Pracuję: <input type="checkbox" name="opcje" maxlength="1">
+        </label><br><br>
+        <input type="submit" value="Wyślij"></form>
+    </div>
 </body>
 </html>
