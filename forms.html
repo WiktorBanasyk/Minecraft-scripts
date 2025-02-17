@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <script>
+        function sprawdz(form) {
+            alert('Pole Nazwisko musi być wypełnione');
+            form.nazw.focus();
+            return false;
+        }
+        if (form.imie.value == '') {
+            alert('Pole Imię musi być wypełnione');
+            form.imie.focus();
+            return false;
+        }
+    </script>
+
+
+</head>
+<body>
+</body>
+</html>
