@@ -22,22 +22,66 @@
         }
         return true;
     }
+	    function button_colour() {
+		document.body.style.cursor = 'pointer';
+    }
+	    function reset_cursor() {
+    		document.body.style.cursor = 'default';
+	}
     
     </script>
     <style type="text/css">
+    body {
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+            height: 100vh; /* Full viewport height */
+            margin: 0;
+            background-color: blue;
+        }
+
+        /* Style the form container */
         div {
             width: 400px;
-            background-color: #dfdfdf;
-            padding: 10px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
         }
 
+        /* Inputs styling */
         .pole {
-            position: absolute;
-            left: 90px;
-
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: block;
         }
+
+        /* Form title */
         #ak1 {
+            font-size: 16pt;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Submit button */
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #D3D3D3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
             font-size: 14pt;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #D3D3D3;
         }
     </style>
 
@@ -57,7 +101,11 @@
         <input class="pole" name="zawod" value="" size="40"><br><br>
         <label> Pracuję: <input type="checkbox" name="opcje" maxlength="1">
         </label><br><br>
-        <input type="submit" value="Wyślij"></form>
+        <input type="submit" value="Wyślij"
+		onmouseenter="button_colour()"
+		onmouseleave="reset_cursor()">
+		
+	</form>
     </div>
 </body>
 </html>

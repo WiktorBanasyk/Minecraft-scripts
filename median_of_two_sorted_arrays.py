@@ -35,11 +35,12 @@ def findMedianSortedArrays():
         """
         nums1 = [1,2]
         nums2 = [3,4]
-
+        """
         nums1.extend(nums2)
         nums1.sort()
-    
-        
+        """
+        nums1 = sorted(nums1 + nums2)
+
         length = len(nums1)
         mid_index = length // 2
 
