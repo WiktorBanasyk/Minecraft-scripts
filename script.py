@@ -1,18 +1,40 @@
-def read_primes(filename):
-    with open(filename, 'r') as file:
-        primes = [int(line.strip()) for line in file]
-    return primes
+import psutil
+import os
+"""
+# CPU usage 
+cpu_percentage = psutil.cpu_percent(interval=1) 
+ 
+# Memory usage 
+memory = psutil.virtual_memory() 
+memory_percentage = memory.percent 
+ 
+print(f"CPU Usage: {cpu_percentage}%") 
+print(f"Memory Usage: {memory_percentage}%")
+"""
+"""
+def CPU_utilization():
+    
 
-def calculate_sum_and_average(primes):
-    total_sum = sum(primes)
-    average = total_sum / len(primes) if primes else 0
-    return total_sum, average
+CPU_utilization()
+"""
 
-def main():
-    primes = read_primes('primes.txt')
-    total_sum, average = calculate_sum_and_average(primes)
-    print(f"Suma: {total_sum}")
-    print(f"Średnia: {average}")
 
-if __name__ == "__main__":
-    main()
+
+start = psutil.cpu_percent(interval=1)
+print("First check")
+print(abs(psutil.cpu_percent(interval=1) - start))
+print("Second check")
+print(psutil.cpu_percent(interval=1))
+print(f"CPU utilization: {psutil.cpu_percent()}%")
+print(f"Memory utilization: {psutil.virtual_memory().percent}%")
+# Get memory usage 
+memory_info = psutil.virtual_memory() 
+memory_usage = memory_info.percent 
+print(f"Memory Usage: {memory_usage}%")
+
+
+def getCPUtemperature():
+    res = os.popen('vcgencmd mesaure_temp').readline()
+    retrun(res.replace("temp=","").replace("'C\n",""))
+
+
