@@ -22,13 +22,23 @@
         }
         return true;
     }
-	    function button_colour() {
+	function button_colour() {
 		document.body.style.cursor = 'pointer';
-    }
-	    function reset_cursor() {
+    	}
+	function reset_cursor() {
     		document.body.style.cursor = 'default';
 	}
-    
+    	function capital_letter(input) {
+		let value = input.value;
+		if (value.length > 0) {
+			input.value = value.charAt(0).toUpperCase() + value.slice(1);
+		    }
+	}
+	
+	function regexior() {
+		    }
+
+		
     </script>
     <style type="text/css">
     body {
@@ -93,13 +103,33 @@
         onsubmit="return sprawdz(this);">
         <p id="ak1">Dane osobowe:</p>
         </form>
-        <b>Nazwisko:</b>
-        <input class="pole" name="nazw" value="" size="40"><br>
         <b>Imię:</b>
-        <input class="pole" name="imie" value="" size="40"><br>
-        <b>Zawód:</b>
-        <input class="pole" name="zawod" value="" size="40"><br><br>
-        <label> Pracuję: <input type="checkbox" name="opcje" maxlength="1">
+        <input class="pole" name="nazw" value="" size="40" oninput="capital_letter(this)"><br>
+        <b>Nazwisko:</b>
+        <input class="pole" name="imie" value="" size="40" oninput="capital_letter(this)"><br>
+	<b>Adres e-mail:</b>
+	<input id="email" type="email" class="pole" name="email" value="" size="40"><br>
+	<b>Data urodzenia:</b>
+	<input class="pole" name="data" value="" size="40" type="date"><br>
+	<b>Zawód:</b>
+	<select class="pole" name="zawod" size="5" multiple>
+		<option value="informatyk">Informatyk</option>
+		<option value="programista">Programista</option>
+		<option value="teleinformatyk">Teleinformatyk</option>
+		<option value="elektryk">Elektryk</option>
+		<option value="elektronik">Elektronik</option>
+	</select><br>
+	<b>Stopnień/Tytuł</b>
+	<select class="pole" name="stopien" size="5" multiple>
+		<option value="technik">Technik</option>
+                <option value="inzynier">Inżynier</option>
+                <option value="magister">Magister</option>
+                <option value="doktor">Doktor</option>
+                <option value="profesor">Profesor</option>
+	</select>
+	<!--<input class="pole" name="zawod" value="" size="40"><br><br>-->
+        
+	<label> Pracuję: <input type="checkbox" name="opcje" maxlength="1">
         </label><br><br>
         <input type="submit" value="Wyślij" onmouseenter="button_colour()" onmouseleave="reset_cursor()">
 		
