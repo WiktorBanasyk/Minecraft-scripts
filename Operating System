@@ -6,3 +6,6 @@ Główne zalety:
 -zwiększenie niezawodności (w przypadku awarii jednego dysku dane nadal są bezpieczne)
 -zwiększenie wydajności transmisji danych kosztem dostepnej powierzchni dyskowej
 -możliwość zwiększenia dostępnej przestrzeni dyskowej., aby była widoczna jako jedna logiczna całość
+
+RAID 0
+Macierz RAID poziomu 0 nazywany jest też woluminem rozłożonym (striped volume). Minimalna liczba dysków potrzebnych do budowy tej macierzy to dwa. Dane dzielone sa na tak zwane paski "Stripes" i rozkładane na wszystkich wchodzących w skład macierzy dyskach.
