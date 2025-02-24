@@ -36,7 +36,16 @@
 	}
 	
 	function regexior() {
-		    }
+		const email = document.getElementById('email').value;
+                const ewr = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
+
+			    if (email.match(ewr)) {
+						alert('Email jest poprawny!');
+					}
+			    else {
+						alert('Email nie jest poprawny!');
+					}
+	}
 
 		
     </script>
@@ -107,7 +116,7 @@
         <input class="pole" name="nazw" value="" size="40" oninput="capital_letter(this)"><br>
         <b>Nazwisko:</b>
         <input class="pole" name="imie" value="" size="40" oninput="capital_letter(this)"><br>
-	<b>Adres e-mail:</b>
+	<b for="email">Adres e-mail:</b>
 	<input id="email" type="email" class="pole" name="email" value="" size="40"><br>
 	<b>Data urodzenia:</b>
 	<input class="pole" name="data" value="" size="40" type="date"><br>
