@@ -22,3 +22,9 @@ Wady macierzy RAID 0:
 -100MB/s wydajność macierzy będzie bliska 200MB/s
 Np: 3 dyski. 2,5GB, 10GB 15GB. Suma bedzie wynosiła 7,5GB (najmniejsza pojemność razy ilość dysków)
 -brak jakiejkolwiek nadmiarowości zwiększa ryzyko utraty danych [pnieważ uszkodzenie jednego dysku powoduje utratę praktycznie wszystkich danych z całej macierzy
+
+RAID 1
+Macierz dublowana (mirrored volume), tworzy kopie danych na dwóch bądź więcej dyskach. Większość rozwiązań jednak tą liczbę do dwóch . W teorii macierz poziomu pierwszego zapewnia zwielokrotnienie wydjaności odczytu podobne do RAID 0, 
+dzięki czytaniu danych z wszystkich składowych dysków na raz (w praktyce tak nie jest).
+
+Najczęściej w macierzach korzysta sie z blixniaczych modlei dysków, kupionych i zapewne wyprodukowanych w podobnym czasie. Nie nalezy mylić macierzy RAID z kopiami bezpieczeństwa. 
