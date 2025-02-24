@@ -1,0 +1,24 @@
+Macierz dyskowa - urządzenie zawierające od kilku do kilkudziesięciu dysków fizycznych, które pogrupowane są w kilka do kilkudziesięciu grup RAID.
+
+RAID nadmiarowa macierz nezależnuch dysków - polega na współpracy dwóch lub więcej dysków twardych w taki sposób aby zapewnić dodatkowe mozliwości nieosiągalne przy użyciu jednego dysku jak i kilku dysków podłączonych indywidualnie.
+
+Główne zalety:
+-zwiększenie niezawodności (w przypadku awarii jednego dysku dane nadal są bezpieczne)
+-zwiększenie wydajności transmisji danych kosztem dostepnej powierzchni dyskowej
+-możliwość zwiększenia dostępnej przestrzeni dyskowej., aby była widoczna jako jedna logiczna całość
+
+RAID 0
+Macierz RAID poziomu 0 nazywany jest też woluminem rozłożonym (striped volume). Minimalna liczba dysków potrzebnych do budowy tej macierzy to dwa. Dane dzielone sa na tak zwane paski "Stripes" i rozkładane na wszystkich wchodzących w skład macierzy dyskach.
+
+Zalety macierzy RAID 0 to:
+poprawa wydajności zapisu i odczytu, co sprawdza się w najlepszym wypadku do iloczynu wydajności najwolniejszego z dysków w macierzy i liczby dysków w jej skład wchodzących
+
+PASKI - wzrost wydajnosci uzyskuje się poprzez podzelenie danych na bloki danych o rozmiarze najczesciej 256 lub 1024 sektorów i umieszczenie ich kolejno na wszystkich dyskach. 
+Rozmiar paska ma znaczenie dla wydajnosci macierzy. W przypadku serwera plików, zktórego korzysta wielu użytkonwijków żadających dostępu do wielu plików równocześnie lepiej sprawdzają
+się dłuzsze [aslo. Natomiast w przypadku komputera wykorzystywanego przez jendego użytkownika lepszym rozwiązanie są krótsz paski.
+
+Wady macierzy RAID 0:
+-wspóne dla wiekszości poziomów RAID ograniczeni eodnosnie takiej samej wielkości dysków składowych
+-100MB/s wydajność macierzy będzie bliska 200MB/s
+Np: 3 dyski. 2,5GB, 10GB 15GB. Suma bedzie wynosiła 7,5GB (najmniejsza pojemność razy ilość dysków)
+-brak jakiejkolwiek nadmiarowości zwiększa ryzyko utraty danych [pnieważ uszkodzenie jednego dysku powoduje utratę praktycznie wszystkich danych z całej macierzy
