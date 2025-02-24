@@ -6,13 +6,42 @@
 	<title>formularze.html</title>
 	</head>
 	<body>
-		<h2>Formularz - zadanie nr. 1</h2>
 		<form action="#" method="post">
-			<p>Przycisk wyślij i wyczyść</p>
+			<div>	
+				<h2>Formularz - zadanie nr. 1</h2>
 				<!--<input type="submit" value="Wyślij"><br>
 				<input type="reset" value="Wyczyść"><br>-->
 				<button type="submit" name="przycisk_submit">Wyślij</button><br>
 				<button type="reset" name="przycisk_reset">Wyczyść</button><br>
-			
+				<input type="text" name="login">Login</input><br>
+				<input type="password" name="password">Password</input><br>
+			</div>
+			<div>
+				<h2>Formularz - zadanie nr. 2</h2>
+				<b>Imię</b>
+				<input type="text" name="imie"></input><br>
+				<b>Nazwisko</b>
+				<input type="text" name="nazwisko"></input><br>
+				<b>Województwo</b>
+				<select id="wojewodztwo" name="wojewodztwo">
+ 					<option value="0" selected>Wybierz</option>
+    					<option value="dolnoslaskie">Dolnośląskie</option>
+			    		<option value="kujawsko-pomorskie">Kujawsko-Pomorskie</option>
+    					<option value="lubelskie">Lubelskie</option>
+    					<option value="lubuskie">Lubuskie</option>
+					<option value="lodzkie">Łódzkie</option>
+    					<option value="malopolskie">Małopolskie</option>
+    					<option value="mazowieckie">Mazowieckie</option>
+    					<option value="opolskie">Opolskie</option>
+    					<option value="podkarpackie">Podkarpackie</option>
+    					<option value="podlaskie">Podlaskie</option>
+    					<option value="pomorskie">Pomorskie</option>
+    					<option value="slaskie">Śląskie</option>
+    					<option value="swietokrzyskie">Świętokrzyskie</option>
+    					<option value="warminsko-mazurskie">Warmińsko-Mazurskie</option>
+    					<option value="wielkopolskie">Wielkopolskie</option>
+   	 				<option value="zachodniopomorskie">Zachodniopomorskie</option>
+				</select><br>
+
 	</body>
 </html>
