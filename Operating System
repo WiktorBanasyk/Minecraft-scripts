@@ -1,1 +1,8 @@
-Macierz dyskowa - urządzenie zawierające od kilku do kilkudziesięciu dysków fizycznych, które pogrupowane są w kilka do kilkudziesięciu grup RAID
+Macierz dyskowa - urządzenie zawierające od kilku do kilkudziesięciu dysków fizycznych, które pogrupowane są w kilka do kilkudziesięciu grup RAID.
+
+RAID nadmiarowa macierz nezależnuch dysków - polega na współpracy dwóch lub więcej dysków twardych w taki sposób aby zapewnić dodatkowe mozliwości nieosiągalne przy użyciu jednego dysku jak i kilku dysków podłączonych indywidualnie.
+
+Główne zalety:
+-zwiększenie niezawodności (w przypadku awarii jednego dysku dane nadal są bezpieczne)
+-zwiększenie wydajności transmisji danych kosztem dostepnej powierzchni dyskowej
+-możliwość zwiększenia dostępnej przestrzeni dyskowej., aby była widoczna jako jedna logiczna całość
