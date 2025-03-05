@@ -28,3 +28,38 @@ Macierz dublowana (mirrored volume), tworzy kopie danych na dwóch bądź więce
 dzięki czytaniu danych z wszystkich składowych dysków na raz (w praktyce tak nie jest).
 
 Najczęściej w macierzach korzysta sie z blixniaczych modlei dysków, kupionych i zapewne wyprodukowanych w podobnym czasie. Nie nalezy mylić macierzy RAID z kopiami bezpieczeństwa. 
+
+
+
+
+
+
+
+RAID 5
+
+
+
+RAID 0+1
+
+Zalety:
+-wydajność podobna do macierzy RAID0
+-bezpieczeństwo macierzy opartej na mirrorze - raid 1 - w szczególnoścym wypadku nawet wiekdsze ( awaria więcej niż jednego dysku w pojedynyczym mirrorze)
+-nacznie prostsza w implementacji niz raid 3 5 6
+
+Wady:
+-wiekszy koszt przechowywana danych niz w przypaku raid 0,23,4,5,,6 wynikacjacy z zastosowanie wiekszej ilsoci dyskow
+
+
+
+RAID 1+0
+
+zalety:
+-szybkość macierzy raid 0
+-bezpieczenstwo macierzy raid 1 -w szczegolnym wypadku nawet wieksza (awaria wiecej niz jednego dysku roznych mirrorow)
+-znacznie łatwiejsza w implementacji niz raid 3,5 i 6
+
+wady:
+-zwiekszone koszty skladowani danuch niz w przpdaku raid 0,2,3,4,5,6 ze wzgledu na koniecznosc zaangazowania wikesszej liczby nosnikw
+
+
+
